@@ -12,7 +12,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 ###############################################################################
 #
-# TODO: 2. READ these instructions, ASKING QUESTIONS as needed.
+# DONE: 2. READ these instructions, ASKING QUESTIONS as needed.
 #
 #   This module contains "broken" functions, as in m1 and m2.
 #   FOLLOW THE SAME STEPS as in the instructions of m1.py
@@ -42,6 +42,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 def main():
     """ Calls the   TEST   functions in this module. """
+    run_test_broken_1()
 
 
 ###############################################################################
@@ -100,7 +101,7 @@ def run_test_broken_1():
 
 
 # -----------------------------------------------------------------------------
-# TODO: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
+# DONE: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
 #          to correct the mistake(s) in the following function.
 # -----------------------------------------------------------------------------
 def broken_1(m):
@@ -122,12 +123,13 @@ def broken_1(m):
     #    **  For full credit you must appropriately
     #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
     count = 0
-    for k in range(2 * m):
-        if is_prime(m):
+    for k in range(m+2):
+        if is_prime(k+m):
             count = count + 1
+    return count
 
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
-    main()
+main()
